@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="weather.css" type="text/css">
+        <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    </head>
+    <body>
+        <ul class="nav justify-content-end bg-primary py-4">
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="about.html">About</a>
+            </li>
+        </ul>
+
+
+        <p class="h1">Weather</p>
+        <hr>
+
+
+        <div class="container-fluid p-5 ">
+            <div class="row justify-content-center p-4">
+                <div class="col-6">
+                    <fieldset>
+                        <form  method="POST" >
+                        <input name="yourcity"   type="text" class="city-input" size="60px" placeholder="Enter a City" required >
+                        <input type="submit" class="sub-button" value="Get Weather">
+                      </form>
+                    </fieldset>  
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container p-5 "  style="background:transparent url('https://s.yimg.com/fz/api/res/1.2/re.wUYkkkiwpq59R0iXqfQ--~C/YXBwaWQ9c3JjaGRkO2ZpPWZpdDtxPTgw/https://s.yimg.com/pv/static/img/Rectangle-201810052314.png') no-repeat center center /cover">
+            <div class="row p-5 ">
+                <div class="col-6 ">
+                    <img src=<%=url%>   alter=""  name="icon_image" class="icon"/>
+                    <div id="temperature"> <%=temperature%></div> 
+                </div>
+                <div class="col-6 pt-5">
+                    <div id="cityname"><%=cityname%></div>
+                    <div id="wind-speed"><%=wind_speed%></div>
+                    <div id="weather"><%=weather%></div>
+                    <div id="humidity"><%=humidity%></div>
+                </div>
+             </div>
+        </div>
+    </body>
+</html>
